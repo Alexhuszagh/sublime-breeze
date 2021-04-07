@@ -1,0 +1,1131 @@
+[
+
+//
+// TABS (REGULAR)
+//
+
+    // Tab set
+    {
+        "class": "tabset_control",
+        "layer0.tint": [49, 54, 59],
+        "layer0.inner_margin": 0,
+        "layer0.opacity": 1,
+        "content_margin": [0, 0, 0, 8],
+        "tab_overlap": 0,
+        "tab_width": 128,
+        "tab_min_width": 48,
+        "tab_height": 40,
+        "mouse_wheel_switch": false
+    },
+    {
+        "class": "tabset_control",
+        "settings": ["mouse_wheel_switches_tabs"],
+        "mouse_wheel_switch": true
+    },
+    {
+        "class": "tabset_control",
+        "settings": ["tabs_small"],
+        "tab_height": 20
+    },
+    {
+        "class": "tabset_control",
+        "settings": ["tabs_medium"],
+        "tab_height": 30
+    },
+    // Tab element
+    {
+        "class": "tab_control",
+        "content_margin": [0, 0, 0, 0],
+        "max_margin_trim": 0,
+        "hit_test_level": 0,
+        "layer0.texture": "Theme - Breeze/assets/tab-inactive.png",
+        "layer0.inner_margin": [0,0],
+        "layer0.opacity": 1,
+        "layer1.texture": "Theme - Breeze/assets/tab-active.png",
+        "layer1.inner_margin": [0,0],
+        "layer1.opacity": 0,
+        "layer2.texture": "Theme - Breeze/assets/tab-hover.png",
+        "layer2.inner_margin": [0,0],
+        "layer2.opacity": 0
+    },
+    // Tab close state
+    {
+        "class": "tab_control",
+        "settings": ["show_tab_close_buttons"],
+        "content_margin": [22, 0, 22, 0]
+    },
+    // Tab close state padding medium
+    {
+        "class": "tab_control",
+        "settings": ["tabs_padding_medium"],
+        "content_margin": [16, 0, 12, 0]
+    },
+    // Tab close state padding small
+    {
+        "class": "tab_control",
+        "settings": ["tabs_padding_small"],
+        "content_margin": [8, 0, 5, 0]
+    },
+    // Tab hover state
+    {
+        "class": "tab_control",
+        "attributes": ["hover"],
+        "layer2.opacity": 1
+    },
+    // Tab active state
+    {
+        "class": "tab_control",
+        "attributes": ["selected"],
+        "layer0.opacity": 0,
+        "layer1.opacity": 1,
+        "layer2.opacity": 0
+    },
+    // Tab dirty state (close button hidden)
+    {
+        "class": "tab_control",
+        "attributes": ["dirty"],
+        "layer0.texture": "Theme - Breeze/assets/tab-modified.png",
+        "layer1.texture": "Theme - Breeze/assets/tab-active.png",
+        "layer2.texture": "Theme - Breeze/assets/tab-modified.png"
+    },
+
+//
+// TAB BUTTONS
+//
+
+    // Tab close button
+    {
+        "class": "tab_close_button",
+        "layer0.texture": "Theme - Breeze/assets/close.png",
+        "layer0.opacity": 0,
+        "layer0.tint": [239, 240, 241]
+    },
+    {
+        "class": "tab_close_button",
+        "settings": ["show_tab_close_buttons"],
+        "content_margin": [8,8]
+    },
+    {
+        "class": "tab_close_button",
+        "parents": [{"class": "tab_control","attributes": ["hover"]}],
+        "layer0.texture": "Theme - Breeze/assets/close.png",
+        "layer0.opacity": 1
+    },
+    {
+        "class": "tab_close_button",
+        "parents": [{"class": "tab_control"}],
+        "attributes": ["hover"],
+        "layer0.opacity": 1,
+        "layer0.tint": [244, 245, 246]
+    },
+    {
+        "class": "tab_close_button",
+        "parents": [{"class": "tab_control","attributes": ["selected"]}],
+        "layer0.opacity": 1
+    },
+    // Tab dirty button
+    {
+        "class": "tab_close_button",
+        "parents": [{"class": "tab_control","attributes": ["dirty"]}],
+        "layer0.texture": "Theme - Breeze/assets/circle.png",
+        "layer0.tint": [239, 240, 241],
+        "layer0.opacity": 1
+    },
+    {
+        "class": "tab_close_button",
+        "layer0.texture": "Theme - Breeze/assets/circle.png",
+        "parents": [{"class": "tab_control","attributes": ["dirty","selected"]}]
+    },
+    // Tab close button hover
+    {
+        "class": "tab_close_button",
+        "attributes": ["hover"]
+    },
+    // Tab close button pressed
+    {
+        "class": "tab_close_button",
+        "attributes": ["pressed"],
+        "layer0.opacity": 0.5
+    },
+
+//
+// TAB LABELS
+//
+
+    //  Inactive tab label
+    {
+        "class": "tab_label",
+        "fg": [118, 121, 124],
+        "shadow_color": [0, 0, 0, 200],
+        "shadow_offset": [0, 1]
+    },
+    {
+        "class": "tab_label",
+        "parents": [{"class": "tab_control","attributes": ["hover"]}],
+        "fg": [244, 245, 246]
+    },
+    {
+        "class": "tab_label",
+        "parents": [{"class": "tab_control","attributes": ["selected"]}],
+        "fg": [239, 240, 241]
+    },
+    {
+        "class": "tab_label",
+        "attributes": ["transient"],
+        "font.italic": true
+    },
+
+//
+// FOLD BUTTONS
+//
+
+    {
+        "class": "fold_button_control",
+        "layer0.texture": "Theme - Breeze/assets/fold-right.png",
+        "layer0.tint": [239, 240, 241],
+        "layer0.opacity": 0.5,
+        "layer0.inner_margin": 0,
+        "content_margin": [8,8]
+    },
+    {
+        "class": "fold_button_control",
+        "attributes": ["hover"],
+        "layer0.opacity": 0.7
+    },
+    {
+        "class": "fold_button_control",
+        "attributes": ["expanded"],
+        "layer0.texture": "Theme - Breeze/assets/fold-down.png"
+    },
+    {
+        "class": "fold_button_control",
+        "attributes": ["expanded","hover"]
+    },
+
+//
+// STANDARD SCROLLBARS
+//
+
+    // Standard vertical scroll bar
+    {
+        "class": "scroll_bar_control",
+        "layer0.texture": "",
+        "layer0.tint": [49, 54, 59],
+        "layer0.opacity": 1,
+        "layer0.inner_margin": [0,0],
+        "blur": true
+    },
+    // Standard horizontal scroll bar
+    {
+        "class": "scroll_bar_control",
+        "attributes": ["horizontal"],
+        "layer0.texture": "",
+        "layer0.tint": [49, 54, 59],
+        "layer0.inner_margin": [0,0],
+        "blur": true
+    },
+    // Standard scroll bar corner
+    {
+        "class": "scroll_corner_control",
+        "layer0.texture": "",
+        "layer0.tint": [49, 54, 59],
+        "layer0.inner_margin": [0,0],
+        "layer0.opacity": 1
+    },
+    // Standard vertical scroll puck
+    {
+        "class": "puck_control",
+        "layer0.texture": "",
+        "layer0.tint": [0, 0, 0],
+        "layer0.opacity": 0.3,
+        "layer0.inner_margin": [0,0],
+        "content_margin": [6,0],
+        "blur": false
+    },
+    // Standard horizontal scroll puck
+    {
+        "class": "puck_control",
+        "attributes": ["horizontal"],
+        "layer0.tint": [0, 0, 0],
+        "layer0.opacity": 0.3,
+        "layer0.inner_margin": [0,0],
+        "content_margin": [12,6],
+        "blur": false
+    },
+
+//
+// OVERLAY SCROLLBARS
+//
+
+    // Overlay toggle scroll bar
+    {
+        "class": "scroll_area_control",
+        "settings": ["overlay_scroll_bars"],
+        "overlay": true
+    },
+    {
+        "class": "scroll_area_control",
+        "settings": ["!overlay_scroll_bars"],
+        "overlay": false
+    },
+    // Overlay vertical scroll bar
+    {
+        "class": "scroll_bar_control",
+        "settings": ["overlay_scroll_bars"],
+        "layer0.tint": [0, 0, 0],
+        "layer0.inner_margin": [0,5],
+        "layer0.opacity": 0,
+        "blur": false
+    },
+    // Overlay horizontal scroll bar
+    {
+        "class": "scroll_bar_control",
+        "settings": ["overlay_scroll_bars"],
+        "attributes": ["horizontal"],
+        "layer0.inner_margin": [5,0],
+        "layer0.opacity": 0,
+        "blur": true
+    },
+    // Overlay vertical puck
+    {
+        "class": "puck_control",
+        "settings": ["overlay_scroll_bars"],
+        "layer0.tint": [0, 0, 0],
+        "layer0.opacity": 0.3,
+        "layer0.inner_margin": [0,5],
+        "content_margin": [2,32],
+        "blur": true
+    },
+    // Overlay horizontal puck
+    {
+        "class": "puck_control",
+        "settings": ["overlay_scroll_bars"],
+        "attributes": ["horizontal"],
+        "layer0.tint": [0, 0, 0],
+        "layer0.opacity": 0.3,
+        "layer0.inner_margin": [5,0],
+        "content_margin": [16,2],
+        "blur": true
+    },
+    // Overlay light puck (for dark content)
+    {
+        "class": "puck_control",
+        "settings": ["overlay_scroll_bars"],
+        "attributes": ["dark"],
+        "layer0.tint": [0, 0, 0],
+        "layer0.opacity": 0.3
+
+    },
+    // Overlay light horizontal puck (for dark content)
+    {
+        "class": "puck_control",
+        "settings": ["overlay_scroll_bars"],
+        "attributes": ["horizontal","dark"],
+        "layer0.tint": [0, 0, 0],
+        "layer0.opacity": 0.3
+    },
+
+//
+// EMPTY WINDOW BACKGROUND
+//
+
+    {
+        "class": "sheet_container_control",
+        "layer0.tint": [49, 54, 59],
+        "layer0.opacity": 1
+    },
+
+
+// GRID LAYOUT
+//
+
+    {
+        "class": "grid_layout_control",
+        "border_size": 1,
+        "border_color": [49, 54, 59]
+    },
+
+//
+// MINI MAP
+//
+
+    {
+        "class": "minimap_control",
+        "viewport_color": [49, 54, 59, 15]
+    },
+
+//
+// LABELS
+//
+
+    // General labels
+    {
+        "class": "label_control",
+        "color": [239, 240, 241]
+    },
+    // Text field labels
+    {
+        "class": "label_control",
+        "parents": [{"class": "panel_control"}]
+    },
+    // Button labels
+    {
+        "class": "label_control",
+        "parents": [{"class": "button_control"}],
+        "font.bold": true,
+        "color": [239, 240, 241]
+    },
+    {
+        "class": "title_label_control",
+        "color": [239, 240, 241]
+    },
+
+//
+// TOOLTIP
+//
+
+    // Tooltip container
+    {
+        "class": "tool_tip_control",
+        // "layer0.texture": "",
+        "layer0.tint": [49, 54, 59],
+        "layer0.inner_margin": [1,1],
+        "layer0.opacity": 1,
+        "content_margin": [4,4]
+    },
+    // Tooltip content
+    {
+        "class": "tool_tip_label_control",
+        "color": [239, 240, 241]
+    },
+
+//
+// STATUS BAR
+//
+
+    // Status bar container
+    {
+        "class": "status_bar",
+        "layer0.texture": "",
+        "layer0.tint": [49, 54, 59],
+        "layer0.opacity": 1,
+        "content_margin": 4
+    },
+    // Status bar button
+    {
+        "class": "status_button",
+        "min_size": [92, 0]
+    },
+    // Status bar label
+    {
+        "class": "label_control",
+        "parents": [{"class": "status_bar"}],
+        "color": [84, 110, 122]
+    },
+
+//
+// SIDEBAR
+//
+
+    // Sidebar container
+    {
+        "class": "sidebar_container",
+        "layer0.texture": "",
+        "layer0.opacity": 1,
+        "layer0.tint": [49, 54, 59],
+        "layer0.inner_margin": [1,5,2,1],
+        "content_margin": [0,4,0,0]
+    },
+    // Sidebar tree
+    {
+        "class": "sidebar_tree",
+        "row_padding": [8,4],
+        "indent": 12,
+        "indent_offset": 14,
+        "indent_top_level": false,
+        "dark_content": true
+    },
+    // Sidebar rows
+    {
+        "class": "tree_row",
+        // "layer0.texture": "",
+        "layer0.tint": [61, 174, 233],
+        "layer0.opacity": 0,
+        "layer0.inner_margin": [1,1]
+    },
+    // Sidebar row selected
+    {
+        "class": "tree_row",
+        "attributes": ["selected"],
+        "layer0.opacity": 0.50
+    },
+    // Sidebar heading
+    {
+        "class": "sidebar_heading",
+        "color": [84, 110, 122],
+        "font.bold": true
+    },
+    {
+        "class": "sidebar_tree",
+        "settings": ["sidebar_tree_xsmall"],
+        "row_padding": [8, 0]
+    },
+    {
+        "class": "sidebar_tree",
+        "settings": ["sidebar_tree_small"],
+        "row_padding": [8, 2]
+    },
+    {
+        "class": "sidebar_tree",
+        "settings": ["sidebar_tree_normal"],
+        "row_padding": [8, 4]
+    },
+    {
+        "class": "sidebar_tree",
+        "settings": ["sidebar_tree_large"],
+        "row_padding": [8, 6]
+    },
+    {
+        "class": "sidebar_tree",
+        "settings": ["sidebar_tree_xlarge"],
+        "row_padding": [8, 8]
+    },
+    // Sidebar heading selected
+    {
+        "class": "sidebar_heading",
+        "parents": [{"class": "tree_row","attributes": ["selected"]}],
+        "shadow_offset": [0,0]
+    },
+    // Sidebar entry
+    {
+        "class": "sidebar_label",
+        "color": [239, 240, 241]
+    },
+    {
+        "class": "sidebar_label",
+        "settings": ["sidebar_font_small"],
+        "font.size": 10.0
+    },
+    {
+        "class": "sidebar_label",
+        "settings": ["sidebar_font_normal"],
+        "font.size": 11.0
+    },
+    {
+        "class": "sidebar_label",
+        "settings": ["sidebar_font_large"],
+        "font.size": 12.0
+    },
+    {
+        "class": "sidebar_label",
+        "settings": ["sidebar_font_xlarge"],
+        "font.size": 14.0
+    },
+    // Sidebar folder entry
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row","attributes": ["expandable"]}],
+        "color": [239, 240, 241]
+    },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row","attributes": ["hover"]}],
+        "color": [239, 240, 241]
+    },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row","attributes": ["expandable"]}],
+        "settings": ["bold_folder_labels"],
+        "font.bold": true
+    },
+    // Sidebar entry selected
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row","attributes": ["selected"]}],
+        "color": [239, 240, 241]
+    },
+
+//
+// SIDEBAR - OPEN FILE TABS
+//
+
+    // Sidebar file close
+    {
+        "class": "close_button",
+        "layer0.texture": "Theme - Breeze/assets/close.png",
+        "layer0.opacity": 0,
+        "layer0.inner_margin": 0,
+        "layer0.tint": [239, 240, 241],
+        "content_margin": [8,8]
+    },
+    {
+        "class": "close_button",
+        "parents": [{"class": "tree_row","attributes": ["selected"]}],
+        "layer0.opacity": 1
+    },
+    {
+        "class": "close_button",
+        "parents": [{"class": "tree_row","attributes": ["hover"]}],
+        "layer0.opacity": 1
+    },
+    // Sidebar file dirty
+    {
+        "class": "close_button",
+        "attributes": ["dirty"],
+        "layer0.texture": "Theme - Breeze/assets/circle.png",
+        "layer0.opacity": 1,
+        "layer0.tint": [239, 240, 241]
+    },
+    {
+        "class": "close_button",
+        "attributes": ["dirty"],
+        "parents": [{"class": "tree_row","attributes": ["selected"]}],
+        "layer0.texture": "Theme - Breeze/assets/circle.png"
+    },
+    // Sidebar file close hover
+    {
+        "class": "close_button",
+        "attributes": ["hover"],
+        "layer0.tint": [244, 245, 246]
+    },
+    {
+        "class": "close_button",
+        "attributes": ["dirty", "hover"],
+        "parents": [{"class": "tree_row","attributes": ["hover"]}],
+        "layer0.texture": "Theme - Breeze/assets/close.png",
+        "layer0.tint": [244, 245, 256]
+    },
+
+//
+// SIDEBAR - FILE ICONS
+//
+
+    // Sidebar group closed (chevron right)
+    {
+        "class": "disclosure_button_control",
+        "content_margin": [8,8],
+        "layer0.texture": "Theme - Breeze/assets/fold-right.png",
+        "layer0.opacity": 1,
+        "layer0.inner_margin": 0
+    },
+    {
+        "class": "disclosure_button_control",
+        "parents": [{"class": "tree_row","attributes": ["hover"]}],
+    },
+    {
+        "class": "disclosure_button_control",
+        "parents": [{"class": "tree_row","attributes": ["selected"]}]
+    },
+    // Sidebar group open (chevron down)
+    {
+        "class": "disclosure_button_control",
+        "attributes": ["expanded"],
+        "layer0.texture": "Theme - Breeze/assets/fold-down.png"
+    },
+    {
+        "class": "disclosure_button_control",
+        "attributes": ["expanded"],
+        "parents": [{"class": "tree_row","attributes": ["hover"]}]
+    },
+    {
+        "class": "disclosure_button_control",
+        "attributes": ["expanded"],
+        "parents": [{"class": "tree_row","attributes": ["selected"]}],
+        "layer0.texture": "Theme - Breeze/assets/fold-down.png"
+    },
+    // Sidebar folder closed
+    {
+        "class": "icon_folder",
+        "content_margin": [0, 0]
+    },
+    // Sidebar folder loading
+    {
+        "class": "icon_folder_loading",
+        "layer0.texture":
+        {
+            "keyframes":
+            [
+                "Theme - Breeze/assets/spinner.png",
+                "Theme - Breeze/assets/spinner1.png",
+                "Theme - Breeze/assets/spinner2.png",
+                "Theme - Breeze/assets/spinner3.png",
+                "Theme - Breeze/assets/spinner4.png",
+                "Theme - Breeze/assets/spinner5.png",
+                "Theme - Breeze/assets/spinner6.png",
+                "Theme - Breeze/assets/spinner7.png"
+            ],
+            "loop": true,
+            "frame_time": 0.075
+        },
+        "layer0.opacity": 0.6,
+        "content_margin": [8, 8]
+    },
+    // Sidebar symlink folder icon
+    {
+      "class": "icon_folder_dup",
+      "content_margin": [0, 0]
+    },
+    // Sidebar file icons
+    {
+        "class": "icon_file_type",
+        // layer0.texture is filled in by code with the relevant icon name
+        "layer0.opacity": 0.6,
+        "content_margin": [8, 8]
+    },
+    {
+        "class": "icon_file_type",
+        "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+        "layer0.opacity": 1.0
+    },
+    {
+        "class": "icon_file_type",
+        "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+        "layer0.opacity": 1.0
+    },
+
+//
+// STANDARD TEXT BUTTONS
+//
+// TODO: may need to comment-out all standard text buttons
+
+    // Default button state
+    {
+        "class": "button_control",
+        "content_margin": [4,8,4,8],
+        "min_size": [64,0],
+        // "layer0.texture": "",
+        "layer0.opacity": 1,
+        "layer0.tint": [49, 54, 59],
+        "layer0.inner_margin": [8,8]
+    },
+    // Hover button state
+    {
+        "class": "button_control",
+        "attributes": ["hover"],
+        // "layer0.texture": "",
+        "layer0.tint": [54, 59, 64]
+    },
+    // Pressed button state
+    {
+        "class": "button_control",
+        "attributes": ["pressed"],
+        // "layer0.texture": "",
+        "layer0.tint": [59, 64, 69]
+    },
+//
+// TEXT INPUT FIELD
+//
+
+    // Text input field item
+    {
+        "class": "text_line_control",
+        // "layer0.texture": "",
+        "layer0.tint": [39, 44, 49],
+        "color_scheme_tint": [39, 44, 49],
+        "layer0.opacity": 1,
+        "content_margin": 6
+    },
+
+//
+// PANEL BACKGROUNDS
+//
+
+    // Bottom panel background
+    {
+        "class": "panel_control",
+        // "layer0.texture": "",
+        "layer0.inner_margin": [0,0],
+        "layer0.opacity": 1,
+        "layer0.tint": [49, 54, 59],
+        "content_margin": 0
+    },
+    // Quick panel background
+    {
+        "class": "overlay_control",
+        "layer0.opacity": 1,
+        // "layer1.texture": "",
+        "layer1.tint": [49, 54, 59],
+        "layer1.inner_margin": [0,0,0,0],
+        "layer1.opacity": 1,
+        "content_margin": 0
+    },
+
+//
+// QUICK PANEL
+//
+// TODO: need to change the quick panel so....
+// Bacground items use 39, 44, 49
+// Selected items use 34, 39, 44
+// There is no outline for the text input...
+
+
+    {
+        "class": "quick_panel",
+        "row_padding": 8,
+        "layer0.tint": [39, 44, 49],
+        "layer0.opacity": 1,
+        "dark_content": true
+    },
+    {
+        "class": "quick_panel_row",
+        // "layer0.texture": "",
+        "layer0.tint": [39, 44, 49],
+        "layer0.inner_margin": 8,
+        "layer0.opacity": 1
+    },
+    {
+        "class": "quick_panel_row",
+        "attributes": ["selected"],
+        // "layer0.texture": "",
+        "layer0.tint": [34, 39, 44]
+    },
+    {
+        "class": "quick_panel_label",
+        "fg": [160, 160, 160, 255],
+        "match_fg": [211, 211, 211, 255],
+        "selected_fg": [211, 211, 211, 255],
+        "selected_match_fg": [242, 242, 242, 255]
+    },
+    {
+        "class": "quick_panel_path_label",
+        "fg": [116, 116, 116, 255],
+        "match_fg": [160, 160, 160, 255],
+        "selected_fg": [116, 116, 116, 255],
+        "selected_match_fg": [160, 160, 160, 255]
+    },
+    {
+        "class": "quick_panel_score_label",
+        "fg": [116, 116, 116, 255],
+        "selected_fg": [116, 116, 116, 255]
+    },
+
+//
+// MINI QUICK PANEL
+//
+
+    {
+        "class": "mini_quick_panel_row",
+        // "layer0.texture": "",
+        "layer0.tint": [39, 44, 49],
+        "layer0.opacity": 1
+    },
+    {
+        "class": "mini_quick_panel_row",
+        "attributes": ["selected"],
+        // "layer0.texture": "",
+        "layer0.tint": [34, 39, 44]
+    },
+
+//
+// CODE COMPLETION DROPDOWN
+//
+
+
+    {
+        "class": "popup_control",
+        "content_margin": [0,0],
+        "layer0.tint": [39, 44, 49],
+        "layer0.opacity": {
+            "target": 1.0,
+            "speed": 10.0,
+            "interpolation": "smoothstep"
+        }
+    },
+    {
+        "class": "auto_complete",
+        "row_padding": [4,4]
+    },
+    {
+        "class": "auto_complete_label",
+        "fg": [118, 121, 124],
+        "match_fg": [239, 240, 241],
+        "selected_fg": [118, 121, 124],
+        "selected_match_fg": [239, 240, 241]
+    },
+    {
+        "class": "table_row",
+        // "layer0.texture": "",
+        "layer0.tint": [61, 174, 233],
+        "layer0.opacity": {
+            "target": 0.0,
+            "speed": 10.0,
+            "interpolation": "smoothstep"
+        },
+        "layer0.inner_margin": [3,1]
+    },
+    {
+        "class": "table_row",
+        "attributes": ["selected"],
+        "layer0.opacity": {
+            "target": 0.08,
+            "speed": 10.0,
+            "interpolation": "smoothstep"
+        }
+    },
+
+//
+// BOTTOM PANEL BUTTONS
+//
+
+    // Button group middle
+    {
+        "class": "icon_button_control",
+        "layer1.texture": "",
+        "layer1.opacity": 0,
+        "content_margin": 7
+    },
+    {
+        "class": "icon_button_control",
+        "attributes": ["selected"],
+        "layer0.opacity": 0
+    },
+    // Button group left
+    {
+        "class": "icon_button_control",
+        "attributes": ["left"],
+        "layer0.texture": ""
+    },
+    // Button group left
+    {
+        "class": "icon_button_control",
+        "attributes": ["left"],
+        "layer0.texture": ""
+    },
+    {
+        "class": "icon_button_control",
+        "attributes": ["left","selected"],
+        "layer0.texture": ""
+    },
+    // Button group right
+    {
+        "class": "icon_button_control",
+        "attributes": ["right"],
+        "layer0.texture": ""
+    },
+    {
+        "class": "icon_button_control",
+        "attributes": ["right","selected"],
+        "layer0.texture": ""
+    },
+    // Button single
+    {
+        "class": "icon_button_control",
+        "attributes": ["left","right"],
+        "layer0.texture": ""
+    },
+    {
+        "class": "icon_button_control",
+        "attributes": ["left","right","selected"],
+        "layer0.texture": ""
+    },
+
+//
+// BOTTOM PANEL ICONS - GROUP 1
+//
+
+    // Regex search button
+    {
+        "class": "icon_regex",
+        "layer0.texture": "Theme - Breeze/assets/regex.png",
+        "layer0.tint": [118, 121, 124],
+        "layer0.opacity": 1,
+        "content_margin": 8
+
+    },
+    {
+        "class": "icon_regex",
+        "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
+        "layer0.tint": [61, 174, 233]
+    },
+    // Case sensitive search button
+    {
+        "class": "icon_case",
+        "layer0.texture": "Theme - Breeze/assets/casesens.png",
+        "layer0.tint": [118, 121, 124],
+        "layer0.opacity": 1,
+        "content_margin": 8
+    },
+    {
+        "class": "icon_case",
+        "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
+        "layer0.tint": [61, 174, 233]
+    },
+    // Match whole word search button
+    {
+        "class": "icon_whole_word",
+        "layer0.texture": "Theme - Breeze/assets/wholeword.png",
+        "layer0.tint": [118, 121, 124],
+        "layer0.opacity": 1,
+        "content_margin": 8
+    },
+    {
+        "class": "icon_whole_word",
+        "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
+        "layer0.tint": [61, 174, 233]
+    },
+
+//
+// BOTTOM PANEL ICONS - GROUP 1 (EXTENDED: FIND IN FILES)
+//
+
+    // Show search context button
+    {
+        "class": "icon_context",
+        "layer0.texture": "Theme - Breeze/assets/context.png",
+        "layer0.tint": [118, 121, 124],
+        "layer0.opacity": 1,
+        "content_margin": 8
+    },
+    {
+        "class": "icon_context",
+        "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
+        "layer0.tint": [61, 174, 233]
+    },
+    // Use search buffer
+    {
+        "class": "icon_use_buffer",
+        "layer0.texture": "Theme - Breeze/assets/buffer.png",
+        "layer0.tint": [118, 121, 124],
+        "layer0.opacity": 1,
+        "content_margin": 8
+    },
+    {
+        "class": "icon_use_buffer",
+        "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
+        "layer0.tint": [61, 174, 233]
+    },
+
+//
+// BOTTOM PANEL ICONS - GROUP 2
+//
+    // Reverse search direction button (ST2 only)
+    {
+        "class": "icon_reverse",
+        "layer0.texture": "Theme - Breeze/assets/reverse.png",
+        "layer0.tint": [118, 121, 124],
+        "layer0.opacity": 1,
+        "content_margin": 8
+    },
+    {
+        "class": "icon_reverse",
+        "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
+        "layer0.tint": [61, 174, 233]
+    },
+    // Search wrap button
+    {
+        "class": "icon_wrap",
+        "layer0.texture": "Theme - Breeze/assets/wrap.png",
+        "layer0.tint": [118, 121, 124],
+        "layer0.opacity": 1,
+        "content_margin": 8
+    },
+    {
+        "class": "icon_wrap",
+        "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
+        "layer0.tint": [61, 174, 233]
+    },
+    // Search in selection button
+    {
+        "class": "icon_in_selection",
+        "layer0.texture": "Theme - Breeze/assets/selection.png",
+        "layer0.tint": [118, 121, 124],
+        "layer0.opacity": 1,
+        "content_margin": 8
+    },
+    {
+        "class": "icon_in_selection",
+        "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
+        "layer0.tint": [61, 174, 233]
+    },
+
+//
+// BOTTOM PANEL ICONS - GROUP 3
+//
+
+    // Preserve case button
+    {
+        "class": "icon_preserve_case",
+        "layer0.texture": "Theme - Breeze/assets/lock.png",
+        "layer0.tint": [118, 121, 124],
+        "layer0.opacity": 1,
+        "content_margin": 8
+    },
+    {
+        "class": "icon_preserve_case",
+        "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
+        "layer0.tint": [61, 174, 233]
+    },
+
+//
+// BOTTOM PANEL ICONS - GROUP 4
+//
+
+    // Highlight results button
+    {
+        "class": "icon_highlight",
+        "layer0.texture": "Theme - Breeze/assets/highlight.png",
+        "layer0.tint": [118, 121, 124],
+        "layer0.opacity": 1,
+        "content_margin": 8
+    },
+    {
+        "class": "icon_highlight",
+        "parents": [{"class": "icon_button_control","attributes": ["selected"]}],
+        "layer0.tint": [61, 174, 233]
+    },
+
+//
+// SIDEBAR FOLDER COLORING
+//
+
+    {
+        "class": "disclosure_button_control",
+        "settings": ["color_expanded_folder"],
+        "attributes": ["expanded"],
+        "layer0.tint": [244, 188, 82]    // -0A
+    },
+
+//
+// TABS SIZING
+//
+
+    // Tab set
+    {
+        "class": "tabset_control",
+        "settings": ["tabs_auto_width"],
+        "tab_width": 0
+    },
+    {
+        "class": "tabset_control",
+        "settings": ["tabs_small"],
+        "tab_height": 22
+    },
+    {
+        "class": "tabset_control",
+        "settings": ["tabs_normal"],
+        "tab_height": 28
+    },
+    {
+        "class": "tabset_control",
+        "settings": ["tabs_large"],
+        "tab_height": 34
+    },
+    {
+        "class": "tabset_control",
+        "settings": ["tabs_xlarge"],
+        "tab_height": 40
+    },
+
+//
+// Dialog
+//
+    {
+        "class": "dialog",
+        "layer0.tint": [49, 54, 59],
+        "layer0.opacity": {
+            "target": 1.0,
+            "speed": 10.0,
+            "interpolation": "smoothstep"
+        }
+    }
+]
