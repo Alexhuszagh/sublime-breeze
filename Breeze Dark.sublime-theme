@@ -326,6 +326,15 @@
     },
 
 //
+// TITLE BAR
+//
+    {
+        "class": "title_bar",
+        "fg": [238, 255, 255],
+        "bg": [39, 44, 49]
+    },
+
+//
 // EMPTY WINDOW BACKGROUND
 //
 
